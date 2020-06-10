@@ -15,7 +15,7 @@ bot = Bot("VRTB5XILUXUM2HB3V4RIUNAL6NYM3DSJ")
 def verify():
     # Webhook verification
     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token") == "hello":
+        if not request.args.get("hub.verify_token") == "lillo_one":
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
     return "Hello world", 200
