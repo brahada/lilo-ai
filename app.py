@@ -8,7 +8,7 @@ app = Flask(__name__)
 PAGE_ACCESS_TOKEN = "EAAstbAhCjnQBAIMZByDg94sEialZBZACpjVjv5mCPuMgJ1ugZC5vyADZCmicZBToZBD1Al2yEazrZCrUuIwi0Cvbf54t10b4nwUOAwirXLZAkxVXZBetONZA1or02mSZBrSnrfHCtWiFU4CHeVhJVsZB61STjLE8bIkdeByoHkawSQf4P7wEc8zAuar5u"
 
 
-bot = Bot(PAGE_ACCESS_TOKEN)
+bot = Bot("VRTB5XILUXUM2HB3V4RIUNAL6NYM3DSJ")
 
 
 @app.route('/', methods=['GET'])
