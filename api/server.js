@@ -1,8 +1,11 @@
+'use strict'
+//https://ca773e96d68b.ngrok.io/webhook?hub.verify_token=lillo_one&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe
 console.log("Hello!");
 
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
+const PAGE_ACCESS_TOKEN = "EAAstbAhCjnQBAFDuksEPrUBcGeqFguWrp4sn4Ov1ylQczbP7n5ROR1S2UWf1At4hQBUjfvke9uTQxZCtGnDU2NnpyC02rvMZAhNI8oRmpwbcijaDfHFZAvvh8K53lf86DtzNQFAGad5hEZC9XM5Vgn4F2utZBBwOqkz2wGLuuUgZDZD";
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: true}))
@@ -20,6 +23,7 @@ app.get('/webhook', (req, res) => {
 
   // Your verify token. Should be a random string.
   let VERIFY_TOKEN = "lillo_one"
+  console.log("Req: "+req);
     
   // Parse the query params
   let mode = req.query['hub.mode'];
@@ -43,11 +47,10 @@ app.get('/webhook', (req, res) => {
   }
 });
 
-// Creates the endpoint for our webhook 
 app.post('/webhook', (req, res) => {  
  
   let body = req.body;
-  console.log(body);
+  console.log(req.body);
 
   // Checks this is an event from a page subscription
   if (body.object === 'page') {
@@ -70,4 +73,19 @@ app.post('/webhook', (req, res) => {
 
 });
 
+// Handles messages events
+function handleMessage(sender_psid, received_message) {
+
+}
+
+// Handles messaging_postbacks events
+function handlePostback(sender_psid, received_postback) {
+
+}
+
+// Sends response messages via the Send API
+function callSendAPI(sender_psid, response) {
   
+}
+
+
