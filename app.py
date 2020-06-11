@@ -4,6 +4,7 @@ from utils import wit_response
 from pymessenger import Bot
 
 app = Flask(__name__)
+    app.run()
 
 PAGE_ACCESS_TOKEN = "EAAstbAhCjnQBAIMZByDg94sEialZBZACpjVjv5mCPuMgJ1ugZC5vyADZCmicZBToZBD1Al2yEazrZCrUuIwi0Cvbf54t10b4nwUOAwirXLZAkxVXZBetONZA1or02mSZBrSnrfHCtWiFU4CHeVhJVsZB61STjLE8bIkdeByoHkawSQf4P7wEc8zAuar5u"
 
