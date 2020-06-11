@@ -2,7 +2,7 @@ import os, sys
 from flask import Flask, request
 from utils import wit_response
 from pymessenger import Bot
-
+server=app.server
 app = Flask(__name__)
     app.run()
 
